@@ -1,0 +1,22 @@
+<header >                                
+    <h1>Big Dinosaur Stuff</h1>
+    <!-- <img src="./dino.jpg" alt="Big Dinosaur Picture" /> -->
+    <!-- Write anything here! -->
+    <nav>
+        <ul>
+            <% @all_dinos.each do |dino| %>
+                <li>
+                    <a href="/dinos/<%= dino[:id] %>" class="nav-link" ><%= dino[:name] %></a>
+                </li>                    
+            <% end %>
+        </ul>
+</nav>            
+</header>
+<main>                 
+    <% @all_dinos.each do |dino| %>
+        <div class="dino-card" id="first-card" >
+            <h2><%= dino[:name] %></h2>
+            <p><%= dino[:info] %></p>
+        </div>
+    <% end %>
+</main>     
