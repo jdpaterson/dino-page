@@ -16,7 +16,9 @@
     <% @all_dinos.each do |dino| %>
         <div class="dino-card" id="first-card" >
             <h2><%= dino[:name] %></h2>
-            <p><%= dino[:info] %></p>
+            <p>Translation: <%= dino[:translated_name] %></p>
+            <p>Family: <%= dino[:family] %></p>
+            <p>Diet: <%= dino[:diet] %></p>
         </div>
     <% end %>
 </main>     
